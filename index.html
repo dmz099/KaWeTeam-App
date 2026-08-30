@@ -7,13 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <style>
-        /* (style tetap sama seperti yang Anda berikan) */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* ===== STYLE SAMA SEPERTI SEBELUMNYA ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #f1f3f4;
@@ -24,12 +19,7 @@
             flex-direction: column;
             align-items: center;
         }
-
-        .app-container {
-            max-width: 480px;
-            width: 100%;
-        }
-
+        .app-container { max-width: 480px; width: 100%; }
         .app-header {
             display: flex;
             align-items: center;
@@ -38,22 +28,9 @@
             padding: 4px 0;
             flex-wrap: wrap;
         }
-
-        .app-header .material-icons {
-            font-size: 32px;
-            color: #5746e3;
-        }
-
-        .app-header h1 {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: -0.3px;
-        }
-
-        .app-header .spacer {
-            flex: 1;
-        }
-
+        .app-header .material-icons { font-size: 32px; color: #5746e3; }
+        .app-header h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.3px; }
+        .app-header .spacer { flex: 1; }
         .app-header .btn-icon {
             background: none;
             border: none;
@@ -68,15 +45,8 @@
             color: #5f6368;
             background: #e8eaed;
         }
-
-        .app-header .btn-icon:hover {
-            background: #dadce0;
-        }
-
-        .app-header .btn-icon .material-icons {
-            font-size: 20px;
-            color: #5f6368;
-        }
+        .app-header .btn-icon:hover { background: #dadce0; }
+        .app-header .btn-icon .material-icons { font-size: 20px; color: #5f6368; }
 
         .bottom-nav {
             display: flex;
@@ -86,7 +56,6 @@
             padding: 4px;
             margin-bottom: 24px;
         }
-
         .nav-btn {
             flex: 1;
             border: none;
@@ -104,39 +73,19 @@
             justify-content: center;
             gap: 6px;
         }
-
-        .nav-btn .material-icons {
-            font-size: 18px;
-        }
-
+        .nav-btn .material-icons { font-size: 18px; }
         .nav-btn.active {
             background: #ffffff;
             color: #1a0dab;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
+        .nav-btn:active { transform: scale(0.97); }
 
-        .nav-btn:active {
-            transform: scale(0.97);
-        }
-
-        .page {
-            display: none;
-            animation: fadeIn 0.25s ease;
-        }
-
-        .page.active {
-            display: block;
-        }
-
+        .page { display: none; animation: fadeIn 0.25s ease; }
+        .page.active { display: block; }
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(8px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .stats-grid {
@@ -145,7 +94,6 @@
             gap: 12px;
             margin-bottom: 20px;
         }
-
         .stat-card {
             background: #ffffff;
             border-radius: 16px;
@@ -153,24 +101,9 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
             text-align: center;
         }
-
-        .stat-card .number {
-            font-size: 28px;
-            font-weight: 700;
-            color: #202124;
-        }
-
-        .stat-card .label {
-            font-size: 13px;
-            color: #5f6368;
-            margin-top: 2px;
-        }
-
-        .stat-card .icon {
-            font-size: 24px;
-            color: #5746e3;
-            margin-bottom: 4px;
-        }
+        .stat-card .number { font-size: 28px; font-weight: 700; color: #202124; }
+        .stat-card .label { font-size: 13px; color: #5f6368; margin-top: 2px; }
+        .stat-card .icon { font-size: 24px; color: #5746e3; margin-bottom: 4px; }
 
         .recent-section {
             background: #ffffff;
@@ -179,7 +112,6 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
             margin-bottom: 16px;
         }
-
         .recent-section h3 {
             font-size: 16px;
             font-weight: 600;
@@ -188,39 +120,16 @@
             align-items: center;
             gap: 8px;
         }
-
-        .recent-section h3 .material-icons {
-            font-size: 20px;
-            color: #5746e3;
-        }
-
+        .recent-section h3 .material-icons { font-size: 20px; color: #5746e3; }
         .recent-item {
             padding: 10px 0;
             border-bottom: 1px solid #f1f3f4;
             font-size: 14px;
         }
-
-        .recent-item:last-child {
-            border-bottom: none;
-        }
-
-        .recent-item .title {
-            font-weight: 500;
-            color: #202124;
-        }
-
-        .recent-item .meta {
-            font-size: 12px;
-            color: #5f6368;
-            margin-top: 2px;
-        }
-
-        .empty-state {
-            color: #9aa0a6;
-            font-size: 14px;
-            text-align: center;
-            padding: 20px 0;
-        }
+        .recent-item:last-child { border-bottom: none; }
+        .recent-item .title { font-weight: 500; color: #202124; }
+        .recent-item .meta { font-size: 12px; color: #5f6368; margin-top: 2px; }
+        .empty-state { color: #9aa0a6; font-size: 14px; text-align: center; padding: 20px 0; }
 
         .btn-primary {
             display: inline-flex;
@@ -238,21 +147,10 @@
             transition: background 0.2s;
             text-decoration: none;
         }
-
-        .btn-primary:active {
-            transform: scale(0.97);
-        }
-        .btn-primary:hover {
-            background: #4635c7;
-        }
-
-        .btn-secondary {
-            background: #e8eaed;
-            color: #202124;
-        }
-        .btn-secondary:hover {
-            background: #dadce0;
-        }
+        .btn-primary:active { transform: scale(0.97); }
+        .btn-primary:hover { background: #4635c7; }
+        .btn-secondary { background: #e8eaed; color: #202124; }
+        .btn-secondary:hover { background: #dadce0; }
 
         .form-card {
             background: #ffffff;
@@ -261,14 +159,7 @@
             padding: 20px 16px 16px;
             margin-bottom: 20px;
         }
-
-        .form-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 4px;
-            color: #202124;
-        }
-
+        .form-title { font-size: 18px; font-weight: 600; margin-bottom: 4px; color: #202124; }
         .form-subtitle {
             font-size: 13px;
             color: #5f6368;
@@ -276,11 +167,7 @@
             border-bottom: 1px solid #e8eaed;
             padding-bottom: 14px;
         }
-
-        .field-group {
-            margin-bottom: 18px;
-        }
-
+        .field-group { margin-bottom: 18px; }
         .field-label {
             display: block;
             font-size: 14px;
@@ -288,17 +175,8 @@
             color: #202124;
             margin-bottom: 5px;
         }
-
-        .field-label .required {
-            color: #d93025;
-            margin-left: 2px;
-        }
-
-        .field-label .hint {
-            font-weight: 400;
-            color: #5f6368;
-            font-size: 12px;
-        }
+        .field-label .required { color: #d93025; margin-left: 2px; }
+        .field-label .hint { font-weight: 400; color: #5f6368; font-size: 12px; }
 
         .field-input,
         .field-select,
@@ -316,7 +194,6 @@
             -webkit-appearance: none;
             appearance: none;
         }
-
         .field-input:focus,
         .field-select:focus,
         .field-textarea:focus {
@@ -324,12 +201,7 @@
             box-shadow: 0 0 0 3px rgba(87, 70, 227, 0.12);
             background: #ffffff;
         }
-
-        .field-textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
+        .field-textarea { resize: vertical; min-height: 80px; }
         .field-select {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235f6368' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
@@ -343,7 +215,6 @@
             gap: 12px;
             padding-top: 4px;
         }
-
         .options-group label {
             display: flex;
             align-items: center;
@@ -358,12 +229,10 @@
             border: 1.5px solid #dadce0;
             transition: all 0.15s;
         }
-
         .options-group label:has(input:checked) {
             background: #e8eaf6;
             border-color: #5746e3;
         }
-
         .options-group input[type="radio"],
         .options-group input[type="checkbox"] {
             accent-color: #5746e3;
@@ -379,7 +248,6 @@
             gap: 8px;
             margin-top: 4px;
         }
-
         .sales-chips label {
             display: flex;
             align-items: center;
@@ -394,12 +262,10 @@
             border: 1.5px solid transparent;
             transition: all 0.15s;
         }
-
         .sales-chips label:has(input:checked) {
             background: #e8eaf6;
             border-color: #5746e3;
         }
-
         .sales-chips input[type="radio"] {
             accent-color: #5746e3;
             width: 14px;
@@ -426,13 +292,8 @@
             gap: 8px;
             margin-top: 8px;
         }
-
-        .btn-submit:active {
-            transform: scale(0.97);
-        }
-        .btn-submit:hover {
-            background: #4635c7;
-        }
+        .btn-submit:active { transform: scale(0.97); }
+        .btn-submit:hover { background: #4635c7; }
 
         .toast {
             position: fixed;
@@ -455,49 +316,23 @@
             gap: 10px;
             z-index: 999;
         }
-
         .toast.show {
             opacity: 1;
             transform: translateX(-50%) translateY(0);
         }
+        .toast .material-icons { color: #81c995; font-size: 22px; }
 
-        .toast .material-icons {
-            color: #81c995;
-            font-size: 22px;
-        }
-
-        .text-muted {
-            color: #5f6368;
-            font-size: 12px;
-        }
-        .text-center {
-            text-align: center;
-        }
-        .mt-1 {
-            margin-top: 4px;
-        }
-        .flex {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .mb-2 {
-            margin-bottom: 12px;
-        }
+        .text-muted { color: #5f6368; font-size: 12px; }
+        .text-center { text-align: center; }
+        .mt-1 { margin-top: 4px; }
+        .flex { display: flex; gap: 8px; flex-wrap: wrap; }
+        .mb-2 { margin-bottom: 12px; }
 
         @media (max-width: 400px) {
-            .app-header h1 {
-                font-size: 17px;
-            }
-            .form-card {
-                padding: 16px 12px;
-            }
-            .stats-grid {
-                gap: 8px;
-            }
-            .stat-card .number {
-                font-size: 24px;
-            }
+            .app-header h1 { font-size: 17px; }
+            .form-card { padding: 16px 12px; }
+            .stats-grid { gap: 8px; }
+            .stat-card .number { font-size: 24px; }
         }
     </style>
 </head>
@@ -527,9 +362,8 @@
             </button>
         </div>
 
-        <!-- ==================== DASHBOARD PAGE ==================== -->
+        <!-- ====== DASHBOARD ====== -->
         <div id="page-dashboard" class="page active">
-            <!-- Statistik -->
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="icon material-icons">people</div>
@@ -542,8 +376,6 @@
                     <div class="label">Total SPK</div>
                 </div>
             </div>
-
-            <!-- Tombol aksi cepat -->
             <div class="flex mb-2" style="justify-content:space-between;">
                 <button class="btn-primary" onclick="navigateTo('page-prospek')">
                     <span class="material-icons">add</span> Prospek Baru
@@ -552,22 +384,16 @@
                     <span class="material-icons">add</span> SPK Baru
                 </button>
             </div>
-
-            <!-- Daftar terbaru (gabungan) -->
             <div class="recent-section">
                 <h3><span class="material-icons">history</span> Aktivitas Terbaru</h3>
-                <div id="recentList">
-                    <div class="empty-state">Belum ada data. Mulai isi formulir!</div>
-                </div>
+                <div id="recentList"><div class="empty-state">Belum ada data. Mulai isi formulir!</div></div>
             </div>
-
-            <!-- Tombol export di sini juga -->
             <button class="btn-primary" style="width:100%;" id="exportBtn2">
                 <span class="material-icons">cloud_upload</span> Export Semua Data ke Google Drive
             </button>
         </div>
 
-        <!-- ==================== FORM PROSPEK ==================== -->
+        <!-- ====== FORM PROSPEK ====== -->
         <div id="page-prospek" class="page">
             <div class="form-card">
                 <div class="form-title">Data Prospek</div>
@@ -608,14 +434,14 @@
                     <div class="field-group">
                         <label class="field-label">Nama Sales <span class="required">*</span> <span class="hint">— pilih salah satu</span></label>
                         <div class="sales-chips" id="prospek-sales-group">
-                            <label><input type="radio" name="prospek_sales" value="Lia" /> Lia</label>
-                            <label><input type="radio" name="prospek_sales" value="Gilby" /> Gilby</label>
-                            <label><input type="radio" name="prospek_sales" value="Qey" /> Qey</label>
-                            <label><input type="radio" name="prospek_sales" value="Eva" /> Eva</label>
-                            <label><input type="radio" name="prospek_sales" value="Beby" /> Beby</label>
-                            <label><input type="radio" name="prospek_sales" value="Ice" /> Ice</label>
-                            <label><input type="radio" name="prospek_sales" value="Jody" /> Jody</label>
-                            <label><input type="radio" name="prospek_sales" value="Deyan" /> Deyan</label>
+                            <label for="prospek_sales_lia"><input type="radio" name="prospek_sales" id="prospek_sales_lia" value="Lia" /> Lia</label>
+                            <label for="prospek_sales_gilby"><input type="radio" name="prospek_sales" id="prospek_sales_gilby" value="Gilby" /> Gilby</label>
+                            <label for="prospek_sales_qey"><input type="radio" name="prospek_sales" id="prospek_sales_qey" value="Qey" /> Qey</label>
+                            <label for="prospek_sales_eva"><input type="radio" name="prospek_sales" id="prospek_sales_eva" value="Eva" /> Eva</label>
+                            <label for="prospek_sales_beby"><input type="radio" name="prospek_sales" id="prospek_sales_beby" value="Beby" /> Beby</label>
+                            <label for="prospek_sales_ice"><input type="radio" name="prospek_sales" id="prospek_sales_ice" value="Ice" /> Ice</label>
+                            <label for="prospek_sales_jody"><input type="radio" name="prospek_sales" id="prospek_sales_jody" value="Jody" /> Jody</label>
+                            <label for="prospek_sales_deyan"><input type="radio" name="prospek_sales" id="prospek_sales_deyan" value="Deyan" /> Deyan</label>
                         </div>
                     </div>
                     <button class="btn-submit" type="submit">
@@ -625,7 +451,7 @@
             </div>
         </div>
 
-        <!-- ==================== FORM SPK ==================== -->
+        <!-- ====== FORM SPK ====== -->
         <div id="page-spk" class="page">
             <div class="form-card">
                 <div class="form-title">Data SPK</div>
@@ -654,8 +480,8 @@
                     <div class="field-group">
                         <label class="field-label">Jenis pembelian <span class="required">*</span></label>
                         <div class="options-group">
-                            <label><input type="radio" name="spk_jenis" value="Cash" required /> Cash</label>
-                            <label><input type="radio" name="spk_jenis" value="Kredit" /> Kredit</label>
+                            <label for="spk_jenis_cash"><input type="radio" name="spk_jenis" id="spk_jenis_cash" value="Cash" required /> Cash</label>
+                            <label for="spk_jenis_kredit"><input type="radio" name="spk_jenis" id="spk_jenis_kredit" value="Kredit" /> Kredit</label>
                         </div>
                     </div>
                     <div class="field-group">
@@ -665,21 +491,21 @@
                     <div class="field-group">
                         <label class="field-label">Request NOPOL <span class="required">*</span></label>
                         <div class="options-group">
-                            <label><input type="radio" name="spk_nopol" value="Ya" required /> Ya</label>
-                            <label><input type="radio" name="spk_nopol" value="Tidak" /> Tidak</label>
+                            <label for="spk_nopol_ya"><input type="radio" name="spk_nopol" id="spk_nopol_ya" value="Ya" required /> Ya</label>
+                            <label for="spk_nopol_tidak"><input type="radio" name="spk_nopol" id="spk_nopol_tidak" value="Tidak" /> Tidak</label>
                         </div>
                     </div>
                     <div class="field-group">
                         <label class="field-label">Nama Sales <span class="required">*</span> <span class="hint">— pilih salah satu</span></label>
                         <div class="sales-chips" id="spk-sales-group">
-                            <label><input type="radio" name="spk_sales" value="Lia" /> Lia</label>
-                            <label><input type="radio" name="spk_sales" value="Gilby" /> Gilby</label>
-                            <label><input type="radio" name="spk_sales" value="Qey" /> Qey</label>
-                            <label><input type="radio" name="spk_sales" value="Eva" /> Eva</label>
-                            <label><input type="radio" name="spk_sales" value="Beby" /> Beby</label>
-                            <label><input type="radio" name="spk_sales" value="Ice" /> Ice</label>
-                            <label><input type="radio" name="spk_sales" value="Jody" /> Jody</label>
-                            <label><input type="radio" name="spk_sales" value="Deyan" /> Deyan</label>
+                            <label for="spk_sales_lia"><input type="radio" name="spk_sales" id="spk_sales_lia" value="Lia" /> Lia</label>
+                            <label for="spk_sales_gilby"><input type="radio" name="spk_sales" id="spk_sales_gilby" value="Gilby" /> Gilby</label>
+                            <label for="spk_sales_qey"><input type="radio" name="spk_sales" id="spk_sales_qey" value="Qey" /> Qey</label>
+                            <label for="spk_sales_eva"><input type="radio" name="spk_sales" id="spk_sales_eva" value="Eva" /> Eva</label>
+                            <label for="spk_sales_beby"><input type="radio" name="spk_sales" id="spk_sales_beby" value="Beby" /> Beby</label>
+                            <label for="spk_sales_ice"><input type="radio" name="spk_sales" id="spk_sales_ice" value="Ice" /> Ice</label>
+                            <label for="spk_sales_jody"><input type="radio" name="spk_sales" id="spk_sales_jody" value="Jody" /> Jody</label>
+                            <label for="spk_sales_deyan"><input type="radio" name="spk_sales" id="spk_sales_deyan" value="Deyan" /> Deyan</label>
                         </div>
                     </div>
                     <div class="field-group">
@@ -693,7 +519,6 @@
             </div>
         </div>
 
-        <!-- Footer -->
         <div class="text-center text-muted" style="margin-top:12px; font-size:12px; opacity:0.7;">
             <span class="material-icons" style="font-size:14px; vertical-align:middle;">info</span>
             Data tersimpan di perangkat Anda. Export ke Google Drive dengan tombol ☁️
@@ -730,27 +555,20 @@
                 Object.values(pages).forEach(p => p.classList.remove('active'));
                 const target = document.getElementById(pageId);
                 if (target) target.classList.add('active');
-
                 navBtns.forEach(btn => {
                     btn.classList.toggle('active', btn.dataset.page === pageId);
                 });
-
-                if (pageId === 'page-dashboard') {
-                    renderDashboard();
-                }
+                if (pageId === 'page-dashboard') renderDashboard();
             }
-
             navBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     navigateTo(this.dataset.page);
                 });
             });
-
             window.navigateTo = navigateTo;
 
             // ---------- Toast ----------
             let toastTimer = null;
-
             function showToast(message) {
                 toastMsg.textContent = message || 'Sukses!';
                 toast.classList.add('show');
@@ -764,15 +582,12 @@
             function getProspekData() {
                 return JSON.parse(localStorage.getItem('prospekData') || '[]');
             }
-
             function setProspekData(data) {
                 localStorage.setItem('prospekData', JSON.stringify(data));
             }
-
             function getSpkData() {
                 return JSON.parse(localStorage.getItem('spkData') || '[]');
             }
-
             function setSpkData(data) {
                 localStorage.setItem('spkData', JSON.stringify(data));
             }
@@ -781,35 +596,25 @@
             function renderDashboard() {
                 const prospek = getProspekData();
                 const spk = getSpkData();
-
                 totalProspekEl.textContent = prospek.length;
                 totalSpkEl.textContent = spk.length;
 
                 const all = [];
-                prospek.forEach(item => {
-                    all.push({ type: 'Prospek', ...item });
-                });
-                spk.forEach(item => {
-                    all.push({ type: 'SPK', ...item });
-                });
-
+                prospek.forEach(item => all.push({ type: 'Prospek', ...item }));
+                spk.forEach(item => all.push({ type: 'SPK', ...item }));
                 all.sort((a, b) => {
                     const tA = a._timestamp ? new Date(a._timestamp) : new Date(0);
                     const tB = b._timestamp ? new Date(b._timestamp) : new Date(0);
                     return tB - tA;
                 });
-
                 const recent = all.slice(0, 5);
-
                 if (recent.length === 0) {
                     recentListEl.innerHTML = '<div class="empty-state">Belum ada data. Mulai isi formulir!</div>';
                     return;
                 }
-
                 let html = '';
                 recent.forEach(item => {
-                    const label = item.type === 'Prospek' ? (item.prospek_nama || 'Prospek') : (item.spk_pemesan ||
-                        'SPK');
+                    const label = item.type === 'Prospek' ? (item.prospek_nama || 'Prospek') : (item.spk_pemesan || 'SPK');
                     const date = item._timestamp ? new Date(item._timestamp).toLocaleString('id-ID') : '-';
                     html += `
                         <div class="recent-item">
@@ -842,7 +647,7 @@
                 return data;
             }
 
-            // ---------- URL Web App ----------
+            // ---------- URL Web App (GANTI DENGAN URL ANDA) ----------
             const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx_lCRs74aHHsmWda-bG-Sg0MNZzlrn633VWZEEt0sG1Ycg-dGSbxsOErLwkdtifeKixw/exec';
 
             // ---------- Submit form (simpan ke Spreadsheet & localStorage) ----------
@@ -861,13 +666,11 @@
                     return;
                 }
 
-                // Jika tombol submit tidak ditemukan, berhenti (tidak mungkin terjadi)
                 if (!submitBtn) {
                     showToast('❌ Terjadi kesalahan pada tombol submit.');
                     return;
                 }
 
-                // Simpan HTML asli tombol
                 const originalBtnHtml = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<span class="material-icons">hourglass_empty</span> Mengirim...';
                 submitBtn.disabled = true;
@@ -877,24 +680,30 @@
                 data.formType = formType;
 
                 try {
-                    console.log('📤 Mengirim data:', data);
+                    console.log('📤 Mengirim data ke:', SCRIPT_URL);
+                    console.log('📦 Data:', data);
 
                     const response = await fetch(SCRIPT_URL, {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(data)
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data),
+                        mode: 'cors',
+                        credentials: 'omit', // agar tidak mengirim cookie
                     });
+
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`HTTP ${response.status} - ${errorText}`);
+                    }
 
                     let result;
                     try {
                         result = await response.json();
                     } catch (jsonError) {
-                        throw new Error('Respons dari server bukan JSON: ' + jsonError.message);
+                        throw new Error('Respons bukan JSON: ' + jsonError.message);
                     }
 
-                    console.log('📥 Respon dari server:', result);
+                    console.log('✅ Respon server:', result);
 
                     if (result.result === 'success') {
                         // Simpan ke localStorage
@@ -919,8 +728,14 @@
                     }
 
                 } catch (error) {
-                    console.error('❌ Error:', error);
-                    showToast('❌ Gagal mengirim data. ' + error.message);
+                    console.error('❌ Error detail:', error);
+                    let pesan = 'Gagal mengirim data. ';
+                    if (error.message.includes('Failed to fetch')) {
+                        pesan += 'Pastikan URL Web App benar dan di-deploy dengan akses "Anyone". Cek koneksi internet.';
+                    } else {
+                        pesan += error.message;
+                    }
+                    showToast('❌ ' + pesan);
                 } finally {
                     submitBtn.innerHTML = originalBtnHtml;
                     submitBtn.disabled = false;
@@ -930,7 +745,6 @@
             formProspek.addEventListener('submit', function(e) {
                 handleSubmit(e, 'prospek');
             });
-
             formSpk.addEventListener('submit', function(e) {
                 handleSubmit(e, 'spk');
             });
@@ -953,22 +767,14 @@
             function exportData() {
                 const prospek = getProspekData();
                 const spk = getSpkData();
-
                 if (prospek.length === 0 && spk.length === 0) {
                     showToast('⚠️ Belum ada data untuk diexport.');
                     return;
                 }
-
-                const payload = {
-                    prospek: prospek,
-                    spk: spk,
-                    exportedAt: new Date().toISOString()
-                };
-
+                const payload = { prospek, spk, exportedAt: new Date().toISOString() };
                 const jsonStr = JSON.stringify(payload, null, 2);
                 const blob = new Blob([jsonStr], { type: 'application/json' });
                 const url = URL.createObjectURL(blob);
-
                 const a = document.createElement('a');
                 a.href = url;
                 a.download = `data_export_${new Date().toISOString().slice(0,10)}.json`;
@@ -976,9 +782,7 @@
                 a.click();
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
-
                 showToast('📁 File siap! Buka Google Drive untuk upload.');
-
                 setTimeout(() => {
                     window.open('https://drive.google.com/drive/u/0/my-drive', '_blank');
                 }, 1200);
